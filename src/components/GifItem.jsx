@@ -1,4 +1,6 @@
-//xport const GifItem = ({image:{title, url}}) => {
+import { PropTypes } from 'prop-types';
+
+//export const GifItem = ({image:{title, url}}) => {
 export const GifItem = ({title, url, id}) => {
   
   return (
@@ -7,4 +9,9 @@ export const GifItem = ({title, url, id}) => {
       <p>{ title }</p>
     </div>
   )
+}
+
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired
 }
